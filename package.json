@@ -1,6 +1,7 @@
 {
   "name": "mc-broadcast-bot",
   "version": "1.0.0",
+  "description": "24/7 Xbox Broadcast for Bedrock 26.2",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
