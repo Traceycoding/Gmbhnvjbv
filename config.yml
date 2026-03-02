@@ -1,7 +1,14 @@
-# MCXboxBroadcast Config
+# MCXboxBroadcast Standalone Configuration
 connection:
   host: "NehemiahGames.aternos.me"
   port: 17876
+
 bot:
-  description: "Join Nehemiah's World!"
+  # This shows as the World Owner (Top Text)
   shown_name: "NehemiahGames"
+  # This shows as the World Name (Bottom Text) in Blue
+  description: "§1Beta Games"
+
+settings:
+  language: "en-US"
+  auto-update: true
