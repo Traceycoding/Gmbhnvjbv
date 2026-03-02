@@ -1,0 +1,7 @@
+# MCXboxBroadcast Config
+connection:
+  host: "NehemiahGames.aternos.me"
+  port: 17876
+bot:
+  description: "Join Nehemiah's World!"
+  shown_name: "NehemiahGames"
