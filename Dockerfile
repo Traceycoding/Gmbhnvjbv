@@ -1,22 +1,19 @@
-# Use a version of Java that works for 26.2
-FROM eclipse-temurin:17-jdk-jammy
+# This image already has Java 17 and Node 20 installed!
+FROM ghcr.io/graalvm/jdk-community:17
 
-# Install Node.js
-RUN apt-get update && apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com | bash -
-RUN apt-get install -y nodejs
+# Install Node.js simply
+RUN curl -sL https://rpm.nodesource.com | bash - && \
+    yum install -y nodejs
 
-# Create app directory
 WORKDIR /usr/src/app
 
-# Copy your files (jar, index.js, package.json, config.yml)
+# Copy your 5 files
 COPY . .
 
-# Install node dependencies
-RUN npm install
+# Install express
+RUN npm install express
 
-# Expose the port for Render
 EXPOSE 3000
 
-# Start the bot
+# Start
 CMD ["node", "index.js"]
